@@ -14,7 +14,6 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - uses: android-actions/setup-android@v3
       - run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
       - run: cp app/build/outputs/apk/debug/app-debug.apk Z4firo.apk
       - uses: softprops/action-gh-release@v2
